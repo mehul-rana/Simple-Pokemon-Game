@@ -1,0 +1,1 @@
+This is a small project I created to enhance my understanding of API's and how to manipulate the data received from it. The game is pretty simple, you can either enter the name of a pokemon you want as your character or randomly get assigned a Pokemon. The Pokemon with the higher Base Power wins.

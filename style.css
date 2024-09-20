@@ -1,0 +1,51 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  max-width: 100%;
+}
+
+body{
+  text-align: center;
+  background-image: url(./img/pokemon-stadium.webp);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-y: hidden;
+  color: black;
+  font-family: system-ui, Roboto, sans-serif;
+}
+
+.player-container{
+  display: flex;
+  margin-top: 20rem;
+}
+
+#player1-container, #player2-container{
+  width: 47.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#versus{
+  width: 5%;
+}
+
+.versus{
+  flex-direction: column;
+  align-self: center;
+  line-height: 317px;
+}
+
+#player1-name, #player2-name{
+  align-self: center;
+  background-color: black;
+  color: white;
+}

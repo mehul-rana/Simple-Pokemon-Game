@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Pokemon</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+
+		<div class="heading">
+			<h1>Pokemon Battle Generator</h1>
+			<label for="input">Choose your Pokemon:</label>
+			<input type="text" name="" value="">
+			<button type="button" name="button" id="getPokemon">Get Pokemon</button>
+			<button type="button" name="button" id="randomPokemon">Random Pokemon</button>
+		</div>
+
+		<div class="player-container">
+			<div id="player1-container">
+				<h2 id="player1-name"></h2>
+				<img src="" alt="" id="player1-img">
+				<h3>Base Power: <span id="player1-power"></span></h3>
+				<p>Type: <span id="player1-type"></span></p>
+			</div>
+			<div id="versus">
+				<p class="versus">VS.</p>
+			</div>
+			<div id="player2-container">
+				<h2 id="player2-name"></h2>
+				<img src="" alt="" id="player2-img">
+				<h3>Base Power: <span id="player2-power"></span></h3>
+				<p>Type: <span id="player2-type"></span></p>
+			</div>
+		</div>
+
+		<div class="result">
+			<p id="result"></p>
+		</div>
+
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>
