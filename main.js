@@ -24,14 +24,9 @@ function getPokemon(){
         document.querySelector('#player1-power').innerText = data.stats[i].base_stat 
         document.querySelector('#player1-type').innerText = data.types[0].type.name
 
-        let player1Power = data.stats[i].base_stat
-        console.log(player1Power)
-      })
-      .catch(err => {
-          console.log(`error ${err}`)
-      });
+        
 
-  fetch(`https://pokeapi.co/api/v2/pokemon/${randomOpponent}`)
+        fetch(`https://pokeapi.co/api/v2/pokemon/${randomOpponent}`)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
@@ -42,8 +37,30 @@ function getPokemon(){
 
         let player2Power = data.stats[i].base_stat
         console.log(player2Power)
+
+        if(player1Power > player2Power){
+          document.querySelector('#result').innerText = 'Player 1 Wins'
+        }else if(player1Power < player2Power){
+          document.querySelector('#result').innerText = 'Player 2 Wins'
+        }else{
+          document.querySelector('#result').innerText = 'Draw'
+        }
+
+
       
       })
+        let player1Power = data.stats[i].base_stat
+        console.log(player1Power)
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
+
+          if(player1Type === 'fire' && player2Type === 'grass'){
+          player1Power += 20
+        }else if(player1Type === 'fire' && player2Type === 'water'){
+          player1Power -= 20
+        }
 
       // Why won't the conditional below work?
 
@@ -84,15 +101,7 @@ function getRandom(){
         document.querySelector('#player1-power').innerText = data.stats[i].base_stat 
         document.querySelector('#player1-type').innerText = data.types[0].type.name
 
-        let player1Power = data.stats[i].base_stat
-        console.log(player1Power)
-      })
-      .catch(err => {
-          console.log(`error ${err}`)
-      });
-
-
-      fetch(player2)
+        fetch(player2)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
@@ -104,7 +113,31 @@ function getRandom(){
         let player2Power = data.stats[i].base_stat
         console.log(player2Power)
       
+
+        if(player1Power > player2Power){
+          document.querySelector('#result').innerText = 'Player 1 Wins'
+        }else if(player1Power < player2Power){
+          document.querySelector('#result').innerText = 'Player 2 Wins'
+        }else{
+          document.querySelector('#result').innerText = 'Draw'
+        }
+
+        if(player1Type === 'fire' && player2Type === 'grass'){
+          player1Power += 20
+        }else if(player1Type === 'fire' && player2Type === 'water'){
+          player1Power -= 20
+        }
+
       })
+        let player1Power = data.stats[i].base_stat
+        console.log(player1Power)
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
+
+
+      
 
       // if(player1Power > player2Power){
       //   document.querySelector('#result').innerText = 'Player 1 Wins'
