@@ -4,6 +4,8 @@ document.querySelector('#randomPokemon').addEventListener('click', getRandom)
 
 let player1Power;
 let player2Power;
+let player1Type;
+let player2Type;
 
 // there are a total of 1025 pokemon registered within this API. 
 
@@ -45,21 +47,21 @@ function getPokemon(){
 
       // Why won't the conditional below work?
 
-      if(player1Power > player2Power){
-        document.querySelector('#result').innerText = 'Player 1 Wins'
-      }else if(player1Power < player2Power){
-        document.querySelector('#result').innerText = 'Player 2 Wins'
-      }else{
-        document.querySelector('#result').innerText = 'Draw'
-      }
+      // if(player1Power > player2Power){
+      //   document.querySelector('#result').innerText = 'Player 1 Wins'
+      // }else if(player1Power < player2Power){
+      //   document.querySelector('#result').innerText = 'Player 2 Wins'
+      // }else{
+      //   document.querySelector('#result').innerText = 'Draw'
+      // }
 
       // I want to incorporate a type advantage system that adds/subtracts power levels based on your type and your opponents type. Below is an example of what I'm trying to do
 
-      if(player1Type === 'fire' && player2Type === 'grass'){
-        player1Power += 20
-      }else if(player1Type === 'fire' && player2Type === 'water'){
-        player1Power -= 20
-      }
+      // if(player1Type === 'fire' && player2Type === 'grass'){
+      //   player1Power += 20
+      // }else if(player1Type === 'fire' && player2Type === 'water'){
+      //   player1Power -= 20
+      // }
 
 }
 
@@ -104,13 +106,30 @@ function getRandom(){
       
       })
 
-      if(player1Power > player2Power){
-        document.querySelector('#result').innerText = 'Player 1 Wins'
-      }else if(player1Power < player2Power){
-        document.querySelector('#result').innerText = 'Player 2 Wins'
-      }else{
-        document.querySelector('#result').innerText = 'Draw'
-      }
+      // if(player1Power > player2Power){
+      //   document.querySelector('#result').innerText = 'Player 1 Wins'
+      // }else if(player1Power < player2Power){
+      //   document.querySelector('#result').innerText = 'Player 2 Wins'
+      // }else{
+      //   document.querySelector('#result').innerText = 'Draw'
+      // }
 }
 
 
+  // Why won't the conditional below work?
+
+if(player1Power > player2Power){
+  document.querySelector('#result').innerText = 'Player 1 Wins'
+}else if(player1Power < player2Power){
+  document.querySelector('#result').innerText = 'Player 2 Wins'
+}else{
+  document.querySelector('#result').innerText = 'Draw'
+}
+
+// I want to incorporate a type advantage system that adds/subtracts power levels based on your type and your opponents type. Below is an example of what I'm trying to do
+
+if(player1Type === 'fire' && player2Type === 'grass'){
+  player1Power += 20
+}else if(player1Type === 'fire' && player2Type === 'water'){
+  player1Power -= 20
+}
