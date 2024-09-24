@@ -26,10 +26,10 @@ function getPokemon() {
       document.querySelector("#player1-type").innerText =
         data.types[0].type.name;
 
-      let player1Power = data.stats[i].base_stat;
+      player1Power = data.stats[i].base_stat;
       console.log(player1Power);
 
-      let player1Type = data.types[0].type.name;
+      player1Type = data.types[0].type.name;
       console.log(player1Type);
 
       fetch(`https://pokeapi.co/api/v2/pokemon/${randomOpponent}`)
@@ -45,10 +45,10 @@ function getPokemon() {
           document.querySelector("#player2-type").innerText =
             data.types[0].type.name;
 
-          let player2Power = data.stats[i].base_stat;
+          player2Power = data.stats[i].base_stat;
           console.log(player2Power);
 
-          let player2Type = data.types[0].type.name;
+          player2Type = data.types[0].type.name;
           console.log(player2Type);
 
           if (player1Power > player2Power) {
@@ -115,7 +115,7 @@ function getRandom() {
       document.querySelector("#player1-type").innerText =
         data.types[0].type.name;
 
-      let player1Power = data.stats[i].base_stat;
+      player1Power = data.stats[i].base_stat;
       console.log(player1Power);
 
       fetch(player2)
@@ -131,7 +131,7 @@ function getRandom() {
           document.querySelector("#player2-type").innerText =
             data.types[0].type.name;
 
-          let player2Power = data.stats[i].base_stat;
+          player2Power = data.stats[i].base_stat;
           console.log(player2Power);
 
           if (player1Power > player2Power) {
